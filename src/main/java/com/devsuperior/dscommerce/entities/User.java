@@ -18,21 +18,22 @@ public class User {
     @Column(unique = true)
     private String email;
     private String phone;
-    private LocalDate birthData;
     private String password;
+    private LocalDate birthDate;
 
     @OneToMany(mappedBy = "client")
     private List<Order> orders = new ArrayList<>();
 
     public User(){}
 
-    public User(long id, String name, String email, String phone, LocalDate birthData, String password) {
+    public User(long id, String name, String email, String phone, String password, LocalDate birthData) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.phone = phone;
-        this.birthData = birthData;
         this.password = password;
+        this.birthDate = birthData;
+
     }
 
     public long getId() {
@@ -67,12 +68,12 @@ public class User {
         this.phone = phone;
     }
 
-    public LocalDate getBirthData() {
-        return birthData;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
-    public void setBirthData(LocalDate birthData) {
-        this.birthData = birthData;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 
     public String getPassword() {
