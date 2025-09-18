@@ -20,7 +20,7 @@ public class User {
     private String password;
 
     @OneToMany(mappedBy = "client")
-    private List<Order> Orders = new ArrayList<>();
+    private List<Order> orders = new ArrayList<>();
 
     public User(){}
 
@@ -82,6 +82,6 @@ public class User {
     }
 
     public List<Order> getOrders() {
-        return Orders;
+        return orders;
     }
 }
