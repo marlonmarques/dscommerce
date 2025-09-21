@@ -61,7 +61,7 @@ public class Product {
     }
 
     public void setDescripiton(String descripiton) {
-        description = descripiton;
+        this.description = descripiton;
     }
 
     public Double getPrice() {
