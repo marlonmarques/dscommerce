@@ -28,7 +28,7 @@ public class Order {
     private Payment payment;
 
     @OneToMany(mappedBy = "id.order")
-    private Set<OderItem> items = new HashSet<>();
+    private Set<OrderItem> items = new HashSet<>();
 
     public Order(){}
 
@@ -80,7 +80,7 @@ public class Order {
         this.payment = payment;
     }
 
-    public Set<OderItem> getItems() {
+    public Set<OrderItem> getItems() {
         return items;
     }
 
