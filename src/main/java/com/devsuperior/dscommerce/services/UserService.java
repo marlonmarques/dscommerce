@@ -46,7 +46,7 @@ public class UserService implements UserDetailsService {
         return user;
     }
 
-    protected User authenticate() {
+    protected  User authenticate() {
 
         try {
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
